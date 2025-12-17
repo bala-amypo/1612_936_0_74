@@ -18,5 +18,21 @@ public Integer getId(){
 //     this.created
 // }
 
-public void setId(Int)
+public void setId(Integer id){
+    this.id=id;
+}
+public String getName(){
+    return name;
+}
+public void setName(String Name){
+    this.name=name;
+}
+public String getEmail(){
+    return Email;
+}
+public void setEmail(String email){
+    this.email=email;
+}
+public 
+
                
