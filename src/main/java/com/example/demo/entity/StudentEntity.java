@@ -18,14 +18,15 @@ private Date created;
 public Date getCreated(){
     return Created;
 }
+public void setCreated(Date created){
+    this.created=created;
+}
 
 public Integer getId(){
     return id;
 }
 
-// public void setCreated(Date created){
-//     this.created
-// }
+
 
 public void setId(Integer id){
     this.id=id;
@@ -53,7 +54,7 @@ public StudentEntity(Integer Id, String name,String email,String password,Date c
     this.id=id;
     this.name=name;
     this.email=email;
-    this.
+    this.password=password;
 }
 
                
