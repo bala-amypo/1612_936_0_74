@@ -3,7 +3,8 @@ package com.example.demo.entity;
 
 public class StudentEntity
 private Integer Id;
-private cahr Email;
-private date Date;
+private String Email;
+private String password;
+private Date created;
 
 
