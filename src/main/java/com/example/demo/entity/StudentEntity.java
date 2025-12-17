@@ -1,12 +1,12 @@
 package com.example.demo.entity;
 
-import jakarta.persistence.entity;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import java.util.Date;
 
-@entity
+@Entity
 
 public class StudentEntity{
     @Id
@@ -17,7 +17,7 @@ private String email;
 private String password;
 private Date created;
 public Date getCreated(){
-    return Created;
+    return created;
 }
 public void setCreated(Date created){
     this.created=created;
@@ -37,7 +37,7 @@ public void setName(String Name){
     this.name=name;
 }
 public String getEmail(){
-    return Email;
+    return email;
 }
 public void setEmail(String email){
     this.email=email;
@@ -54,7 +54,7 @@ public StudentEntity(Integer Id, String name,String email,String password,Date c
     this.name=name;
     this.email=email;
     this.password=password;
-    this.date=date;
+    this.Date=Date;
     
 }
 
