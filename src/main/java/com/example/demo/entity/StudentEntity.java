@@ -8,3 +8,5 @@ private String password;
 private Date created;
 
 
+ public void setId(Integer)
+               
