@@ -54,7 +54,7 @@ public StudentEntity(Integer Id, String name,String email,String password,Date c
     this.name=name;
     this.email=email;
     this.password=password;
-    this.Date=Date;
+    this.created=created;
     
 }
 
