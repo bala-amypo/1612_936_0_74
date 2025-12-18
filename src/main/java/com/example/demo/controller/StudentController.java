@@ -27,12 +27,12 @@ public class StudentController{
         return ser.DeleteData(id);
     }
     @GetMapping("/getid/{id}")
-    public StudentEntity getData(id){
-    return service.getData(id);
+    public StudentEntity getData(int id){
+    return ser.getData(id);
     }
     @PutMapping("/put/{id}")
     public StudentEntity putval(@PathVariable int id,@RequestBody StudentEntity entity ){
-        return service.updateData(id,entity);
+        return ser.updateData(id,entity);
     }
 }
 
