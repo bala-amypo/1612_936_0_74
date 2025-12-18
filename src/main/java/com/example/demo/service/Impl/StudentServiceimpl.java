@@ -5,7 +5,7 @@ import com.example.demo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.example.demo.repository.StudentRepository;
 import com.example.demo.entity.StudentEntity;
-
+import java.util.List;
 
 @Service
 public class StudentServiceimpl implements StudentService{
@@ -17,6 +17,8 @@ public class StudentServiceimpl implements StudentService{
         return student.save(stu);
     }
     @Override
-    public List<StudentEntity>getAlldata()
+    public List<StudentEntity>getAlldata(){
+
+    }
 
 }
