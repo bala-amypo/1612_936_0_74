@@ -13,11 +13,15 @@ public class ValidationEntity{
 
     private Long id;
     @NotNull
-    @size(min=2,max=10,message="must be 2to 10 character")
+    @size(min=2,max=30,message="must be 2to 10 character")
     private String username;
     @Email(message="Email is not valid")
     private String email;
+    @Max(6)
+    @NotNull(message="Password is mandtory")
     private String password;
+    @Max(30)
+    @Positive(message="")
     private int age;
 
 }
