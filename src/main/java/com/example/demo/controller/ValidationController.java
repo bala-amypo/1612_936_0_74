@@ -13,14 +13,14 @@ import com.example.demo.service.ValidationService;
 import java.util.List;
 
 @RestController
-public class StudentController{
-    @Autowired StudentService ser;
+public class ValidationController{
+    @Autowired ValidationService ser;
     @PostMapping("/post")
-    public StudentEntity sendData(@RequestBody StudentEntity entity){
+    public ValidationEntity sendData(@RequestBody ValidationEntity entity){
             return ser.postdata(entity);
     }
     @GetMapping("/Get")
-    public List<StudentEntity>getval(){
+    public List<ValidationEntity>getval(){
         return ser.getAllData();
     }
     @DeleteMapping("/delete/{id}")
@@ -28,11 +28,11 @@ public class StudentController{
         return ser.DeleteData(id);
     }
     @GetMapping("/getid/{id}")
-    public StudentEntity getdata(int id){
+    public ValidationEntity getdata(int id){
     return ser.getData(id);
     }
     @PutMapping("/put/{id}")
-    public StudentEntity putval(@PathVariable int id,@RequestBody StudentEntity entity ){
+    public ValidationEntity putval(@PathVariable int id,@RequestBody ValidationEntity entity ){
         return ser.updateData(id,entity);
     }
 }
