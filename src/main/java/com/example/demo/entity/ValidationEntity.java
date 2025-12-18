@@ -17,9 +17,8 @@ public class ValidationEntity{
     private String password;
     @Max(30)
     @Positive(message = "Age must be a positive number")
-    private Integer age;
+    private Int age;
     
- //Name
     public String getName(){
         return username;
     }
@@ -27,7 +26,6 @@ public class ValidationEntity{
         this.username=username;
     }
 
-    //Id -primary key
     public Long getID(){
         return id;
     }
@@ -35,7 +33,6 @@ public class ValidationEntity{
         this.id=id;
     }
 
-    //Email
     public String getEmail(){
         return email;
     }
@@ -43,7 +40,6 @@ public class ValidationEntity{
         this.email=email;
     }
 
-    // Password
     public String getPassword(){
         return password;
     }
@@ -51,9 +47,8 @@ public class ValidationEntity{
         this.password=password;
     }
 
-    // Created
-    public Date getCreated(){
-        return created;
+    public int getAge(){
+        return age;
     }
     public void setAge(int Age){
         this.age=age;
@@ -62,7 +57,7 @@ public class ValidationEntity{
     @NotNull @Size(min = 2,max = 30,message = "must be 2 to 10 character") String username,
     @Email(message = "Email is not valid") String email,
     @Size(min = 2,max = 30,message = "must be 2 to 10 character") @NotNull(message = "Password is mandatory") String password,
-    @Max(30) @Positive(message = "Age must be a positive number") integer age){
+    @Max(30) @Positive(message = "Age must be a positive number") int age){
         this.id=id;
         this.name=name;
         this.email=email;
