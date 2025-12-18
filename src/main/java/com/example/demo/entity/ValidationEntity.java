@@ -1,60 +1,73 @@
-package com.example.demo.Entity;
+package com.example.demo.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class ValidationEntity{
     @Id
-     @GeneratedValue(strategy=GenerationType.IDENTITY)
-
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     @NotNull
-    @size(min=2,max=30,message="must be 2to 10 character")
+    @Size(min = 2,max = 30,message = "must be 2 to 10 character")
     private String username;
-    @Email(message="Email is not valid")
+    @Email(message = "Email is not valid")
     private String email;
-    @NotNull(message="Password is mandtory")
-    @Size(min=8,max=20,message="must be 8 to 10 character")
+    @Size(min = 2,max = 30,message = "must be 2 to 10 character")
+    @NotNull(message = "Password is mandatory")
     private String password;
     @Max(30)
-    @Positive(message="Age is in +ve")
-    private int age;
-
-public Long getId(){
-        return id;
-    }
-    public void setId(Long Id){
-        this.id=id;
-    }
-    public String getUsername(){
+    @Positive(message = "Age must be a positive number")
+    private Integer age;
+    
+ //Name
+    public String getName(){
         return username;
     }
-    public void setUsername(String username){
+    public void setName(String username){
         this.username=username;
     }
-     public String getEmail(){
+
+    //Id -primary key
+    public Long getID(){
+        return id;
+    }
+    public void setID(Long id){
+        this.id=id;
+    }
+
+    //Email
+    public String getEmail(){
         return email;
     }
     public void setEmail(String email){
         this.email=email;
     }
 
+    // Password
     public String getPassword(){
         return password;
     }
     public void setPassword(String password){
         this.password=password;
     }
-     public int getAge(){
-        return age;
+
+    // Created
+    public Date getCreated(){
+        return created;
     }
-    public void setAge(String age){
+    public void setAge(int Age){
         this.age=age;
     }
-public ValidationEntity(Long id,
-)
+    public ValidationEntity(Long id,
+    @NotNull @Size(min = 2,max = 30,message = "must be 2 to 10 character") String username,
+    @Email(message = "Email is not valid") String email,
+    @Size(min = 2,max = 30,message = "must be 2 to 10 character") @NotNull(message = "Password is mandatory") String password,
+    @Max(30) @Positive(message = "Age must be a positive number") integer age){
+        this.id=id;
+        this.name=name;
+        this.email=email;
+        this.password=password;
+        this.age=age;
+    }
+
 }
