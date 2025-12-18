@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class ValidationServiceImpl implements ValidationService{
-    
-     @Autowired ValidationRepository student;
+
+    @Autowired ValidationRepository student;
      
     @Override
     public ValidationEntity post(ValidationEntity stu){
