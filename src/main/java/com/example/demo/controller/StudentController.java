@@ -19,7 +19,7 @@ public class StudentController{
             return ser.postdata(entity);
     }
     @GetMapping("/Get")
-    public List<Studententity>getval(){
+    public List<StudentEntity>getval(){
         return ser.getAllData();
     }
     @DeleteMapping("/delete/{id}")

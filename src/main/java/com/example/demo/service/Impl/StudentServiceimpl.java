@@ -3,21 +3,21 @@ package com.example.demo.service.impl;
 import org.springframework.stereotype.Service;
 import com.example.demo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.example.demo.repository.Studentrepository;
-import com.example.demo.entity.Studententity;
+import com.example.demo.repository.StudentRepository;
+import com.example.demo.entity.StudentEntity;
 import java.util.List;
 
 @Service
 public class StudentServiceimpl implements StudentService{
         
-    @Autowired Studentrepository student;
+    @Autowired StudentRepository student;
     // save,findAll(),findById(),deleteId(),existsById()
     @Override
-    public Studententity postdata(Studententity entity){
+    public StudentEntity postdata(StudentEntity entity){
         return student.save(entity);
     }
     @Override
-    public List<Studententity>getAllData(){
+    public List<StudentEntity>getAllData(){
         return student.findAll();
     }
     @Override
