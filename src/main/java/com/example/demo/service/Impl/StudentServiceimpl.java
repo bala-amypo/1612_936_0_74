@@ -8,7 +8,7 @@ import com.example.demo.entity.StudentEntity;
 import java.util.List;
 
 @Service
-public class StudentServiceimpl implements StudentService{
+public class  StudentServiceimpl implements StudentService{
         
     @Autowired StudentRepository student;
     // save,findAll(),findById(),deleteId(),existsById()
@@ -29,7 +29,7 @@ public class StudentServiceimpl implements StudentService{
     @Override
     public StudentEntity  updateData(int id,StudentEntity entity){
     if(student.existsById(id)){
-    entity.setId(id);
+    entity.setID(id);
     return student.save(entity);
     }
     return null;
