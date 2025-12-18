@@ -24,5 +24,16 @@ public class ValidationEntity{
     @Positive(message="Age is in +ve")
     private int age;
 
-public 
+public Long getId(){
+        return id;
+    }
+    public void setId(Long Id){
+        this.id=id;
+    }
+    public String getUsername(){
+        return username;
+    }
+    public void setUsername(String name){
+        this.name=name;
+    }
 }
