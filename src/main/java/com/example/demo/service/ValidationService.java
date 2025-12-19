@@ -3,5 +3,5 @@ import com.example.demo.entity.ValidationEntity;
 import java.util.*;
 public interface ValidationService{
     ValidationEntity post(ValidationEntity stu);
-    ValidationEntity  getStudentById(Long id)(ValidationEntity stu);
+    ValidationEntity  getStudentById(Long id);
 }
