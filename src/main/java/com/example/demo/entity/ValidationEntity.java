@@ -14,7 +14,7 @@ public class ValidationEntity{
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     @NotNull
-    @Size(min=2,max=10,message="must be 2 to 10 characters")
+    @Size(min=2,max=10,message="must be 2 to 10 characters")   
     private String username;
     @Email
     private String email;
