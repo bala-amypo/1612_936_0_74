@@ -3,7 +3,7 @@ package com.example.demo.exception;
 
 
 public class ValidationException extends RuntimeException{
-    public validate(String message){
+    public validationException(String message){
       super(message);
       
     }

@@ -17,6 +17,6 @@ public class ValidationController{
     }
     @GetMapping("/getvalid{id}")
     public validationEntity findData(@pathVariable int id){
-        return serve.findData
+        return serve.findById(id).orElseThrow((->new ValidationException("Invalid Id"+id)))
     }
 }
