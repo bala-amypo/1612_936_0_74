@@ -15,4 +15,8 @@ public class ValidationController{
     public ValidationEntity sendData(@Valid @RequestBody ValidationEntity stu){
         return serve.post(stu);
     }
+    @GetMapping("/getvalid{id}")
+    public validationEntity findData(@p){
+        return serve.findData
+    }
 }
